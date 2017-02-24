@@ -6,13 +6,22 @@
     android:layout_height="match_parent"
     tools:context="com.example.hasee.selectortest.MainActivity">
 
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HELLO"
+        android:textColor="@drawable/colortextview"
+        android:background="@drawable/buttonbackground"
+        android:layout_above="@+id/tv" />
+
     <TextView
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="点击啊"
-        android:textColor="@drawable/color"
+        android:textColor="@drawable/colortextview"
         android:textSize="30dp" />
 
     <TextView
@@ -21,15 +30,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv"
         android:layout_centerHorizontal="true"
-        android:textColor="@drawable/color"
         android:text="点击啊"
+        android:textColor="@drawable/colortextview"
         android:textSize="30dp" />
 
     <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tv2">
+        android:layout_below="@+id/tv2"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@drawable/mylist_view">
 
     </ListView>
 </RelativeLayout>
